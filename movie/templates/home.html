@@ -1,3 +1,27 @@
-<!--<h1>Welcome to the Home Page</h1>-->
-<h1>Welcome to the Home Page, {{ name }}</h1>
-<h2>This is the full home page</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>Movie List</h1>
+
+    <form method="get" action="">
+        <input type="text" name="searchMovie" placeholder="Search for a movie">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.description }}</p>
+                {% if movie.url %}
+                    <img src="{{ movie.url }}" alt="{{ movie.title }}" width="200">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
