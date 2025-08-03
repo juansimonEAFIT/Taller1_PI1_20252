@@ -8,13 +8,14 @@ def home(request):
     #return HttpResponse("<h1>Welcome to home page</h1>")
     #return render(request, 'home.html')
     #return render(request, 'home.html', {'name': 'Juan Simón Ospina'})
-    searchterm = request.GET.get('searchMovie')
-    if searchterm:
-        movies = Movie.objects.filter(title__icontains=searchterm)
+    searchTerm = request.GET.get('searchMovie')
+    if searchTerm:
+        movies = Movie.objects.filter(title__icontains=searchTerm)
     else:
         movies = Movie.objects.all()
-    return render(request, 'home.html', {'searchterm': searchterm, 'movies': movies})
+
+    return render(request, 'home.html', {'searchTerm': searchTerm, 'movies': movies, 'name': 'Juan Simón Ospina Martínez'})
 
 
 def about(request):
-    return render(request, 'about.html', {'name': 'Juan Simón Ospina'})
+    return render(request, 'about.html', {'name': 'Juan Simón Ospina Martínez'})

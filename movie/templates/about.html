@@ -1,1 +1,24 @@
-<h1>About Page, {{ name }}</h1><p>This is the about page.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - MovieReviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center">About This Application, {{ name }}</h1>
+        <p class="lead text-center">This Movie Reviews application was developed by Juan Simón Ospina Martínez as part of Taller 1 for the ST0251 course.</p>
+        <p>This application allows users to:</p>
+        <ul>
+            <li>Search for movies and view their details.</li>
+            <li>Add, edit, and delete reviews (once logged in).</li>
+            <li>View latest news related to movies.</li>
+        </ul>
+        <p>All data (movies, reviews, and news) is managed through a database and Django's admin interface.</p>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>
